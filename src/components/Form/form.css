@@ -1,0 +1,71 @@
+body {
+    background-color: #8d8c8c;
+    font-family: Arial, sans-serif;
+}
+
+form {
+    width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea,
+input[type="tel"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f2f2f2;
+    border: 2px solid #333;
+}
+
+select option {
+    color: #333;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+input[type="tel"]:invalid {
+    border-color: #333;
+}
+
+input[type="tel"]:valid {
+    border-color: #4CAF50;
+}
+select option { color: white; 
+background: #333;}

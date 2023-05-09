@@ -1,0 +1,57 @@
+.Navbar{
+    display: flex;
+    flex-direction: row;
+    height: 4rem;
+    background-color: #333;
+}
+.nav__name{
+    display: flex;
+   flex: 1;
+   align-items: center;
+   justify-content: center;
+   color: white;
+}
+.nav__name img{ padding: 2rem;}
+.nav__networkSelector{
+    display: flex;
+   flex:1;
+   align-items: center;
+}
+.nav__networkSelector select{
+    border: 2px solid white;
+    padding: 0.5rem 1.5rem;
+    border-radius:0.4em;
+    margin: 2rem;
+    background-color: #333;
+    color: white;
+}
+.nav__balance{
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.nav__balance-box{
+    border: 2px solid white;
+    border-radius: 2rem;
+    flex:1;
+    height: 2.5rem;
+    margin: 2rem 4rem ;
+    cursor: pointer;
+}
+select option { color: white; }
+
+.nav__myBalance{
+    color: white;
+}
+.nav__myAccount{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.identicon{
+    margin-left: 0.5rem;
+}

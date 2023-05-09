@@ -1,0 +1,31 @@
+.Option{
+    display: flex;
+    background-color: white;
+}
+.opt__form{
+    flex: 1;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.opt__data{
+    flex: 1;
+    display: flex;
+    border: 2px solid black;
+    align-items: center;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+    
+}
+a:hover{
+    background-color: #333;
+    color: white;
+}
