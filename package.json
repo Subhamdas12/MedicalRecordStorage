@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "dotenv": "^16.0.3",
     "hardhat": "^2.11.1",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",

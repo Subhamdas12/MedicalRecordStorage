@@ -3,6 +3,7 @@ import "./data.css";
 import { dataBookSelector } from "../../store/selectors";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteData } from "../../store/interactions";
+
 const Data = () => {
   const orderData = useSelector(dataBookSelector);
   const account = useSelector((state) => state.provider.account);
@@ -19,53 +20,53 @@ const Data = () => {
   return (
     <div>
       {account ? (
-        <table>
-          <thead>
-            <tr>
-              <th>Record ID</th>
-              <th>Data and Time</th>
-              <th>Name</th>
-              <th>Age</th>
-              <th>Gender</th>
-              <th>Blood Type</th>
-              <th>Allergies</th>
-              <th>Diagnosis</th>
-              <th>Treatment</th>
-              <th>Edit</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
-          <tbody>
-            {orderData &&
-              orderData.map((data, index) => {
-                return (
-                  <tr key={index}>
-                    <td>{index + 1}</td>
-                    {/* <td>{data.recordIdNew}</td> */}
-                    <td>{data.formattedTimestamp}</td>
-                    <td>{data.name}</td>
-                    <td>{data.ageNew} </td>
-                    <td>{data.gender}</td>
-                    <td>{data.bloodType}</td>
-                    <td>{data.allergies}</td>
-                    <td>{data.diagnosis}</td>
-                    <td>{data.treatment}</td>
-                    <td>
-                      <button className="edit-button">Edit</button>
-                    </td>
-                    <td>
-                      <button
-                        className="delete-button"
-                        onClick={(e) => deleteHandler(e, data)}
-                      >
-                        Delete
-                      </button>
-                    </td>
-                  </tr>
-                );
-              })}
-          </tbody>
-        </table>
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>Record ID</th>
+                <th>Data and Time</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Blood Type</th>
+                <th>Allergies</th>
+                <th>Diagnosis</th>
+                <th>Treatment</th>
+
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              {orderData &&
+                orderData.map((data, index) => {
+                  return (
+                    <tr key={index}>
+                      <td>{index + 1}</td>
+                      {/* <td>{data.recordIdNew}</td> */}
+                      <td>{data.formattedTimestamp}</td>
+                      <td>{data.name}</td>
+                      <td>{data.ageNew} </td>
+                      <td>{data.gender}</td>
+                      <td>{data.bloodType}</td>
+                      <td>{data.allergies}</td>
+                      <td>{data.diagnosis}</td>
+                      <td>{data.treatment}</td>
+
+                      <td>
+                        <button
+                          className="delete-button"
+                          onClick={(e) => deleteHandler(e, data)}
+                        >
+                          Delete
+                        </button>
+                      </td>
+                    </tr>
+                  );
+                })}
+            </tbody>
+          </table>
+        </div>
       ) : (
         <h1>Connect the account</h1>
       )}

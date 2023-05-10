@@ -4,6 +4,8 @@ import { createSelector } from "reselect";
 
 const allData = (state) => get(state, "medical.allMedical.data", []);
 const deleteData = (state) => get(state, "medical.deleteMedical.data", []);
+const account = (state) => get(state, "provider.account");
+const events = (state) => get(state, "medical.events");
 const openData = (state) => {
   const all = allData(state);
   const delet = deleteData(state);
@@ -38,3 +40,11 @@ export const decorateOrder = (data) => {
       .format("h:mm:ssa d MMM yyyy"),
   };
 };
+
+export const myEventsSelector = createSelector(
+  account,
+  events,
+  (account, events) => {
+    return events;
+  }
+);

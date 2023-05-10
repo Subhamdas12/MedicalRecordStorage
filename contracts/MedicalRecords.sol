@@ -39,17 +39,6 @@ contract MedicalRecords {
         string diagnosis,
         string treatment
     );
-    event MedicalRecords__EditRecord(
-        uint recordId,
-        uint timestamp,
-        string name,
-        uint age,
-        string gender,
-        string bloodType,
-        string allergies,
-        string diagnosis,
-        string treatment
-    );
 
     function addRecord(
         string memory _name,
@@ -100,42 +89,6 @@ contract MedicalRecords {
             record.treatment
         );
         isDeleted[_recordId] = true;
-    }
-
-    function editRecord(
-        uint _recordId,
-        string memory _name,
-        uint _age,
-        string memory _gender,
-        string memory _bloodType,
-        string memory _allergies,
-        string memory _diagnosis,
-        string memory _treatment
-    ) public {
-        require(!isDeleted[_recordId], "The record is deleted");
-        require(_recordId > 0 && _recordId <= recordId);
-        records[_recordId] = Record(
-            _recordId,
-            block.timestamp,
-            _name,
-            _age,
-            _gender,
-            _bloodType,
-            _allergies,
-            _diagnosis,
-            _treatment
-        );
-        emit MedicalRecords__EditRecord(
-            _recordId,
-            block.timestamp,
-            _name,
-            _age,
-            _gender,
-            _bloodType,
-            _allergies,
-            _diagnosis,
-            _treatment
-        );
     }
 
     function getRecord(

@@ -2,8 +2,19 @@
     "31337": {
         "medical": {
             "address": "0x8464135c8F25Da09e49BC8782676a84730C318bC"
-        }
+        },
+        "explorerURL": "#"
     },
-    "5": {},
-    "80001": {}
+    "5": {
+        "medical": {
+            "address": "0x79c8e802C9FBa87a8d38091204731850739F6a83"
+        },
+        "explorerURL": "https://goerli.etherscan.io/"
+    },
+    "80001": {
+        "medical": {
+            "address": "0x70422eCBc3f23bA412140660310Da96f41657d28"
+        },
+        "explorerURL": "https://mumbai.polygonscan.com/"
+    }
 }

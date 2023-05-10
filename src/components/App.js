@@ -15,6 +15,7 @@ import {
   subscribeToEvents,
 } from "../store/interactions";
 import config from "../config.json";
+import Alert from "./Alert/Alert";
 function App() {
   const dispatch = useDispatch();
   const loadBlockchainData = async () => {
@@ -43,8 +44,7 @@ function App() {
           <Route path="/" exact element={<Form />} />
           <Route path="/Data" element={<Data />} />
         </Routes>
-        {/* <Form />
-        <Data /> */}
+        <Alert />
       </div>
     </div>
   );
